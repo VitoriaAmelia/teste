@@ -9,9 +9,6 @@ Antes de começar, certifique-se de que possui os seguintes itens instalados e c
 - 🧠 [Rancher Desktop](https://rancherdesktop.io/) com **Kubernetes habilitado**  
   > **Importante:** No painel inicial, vá em `Preferences → Kubernetes` e marque **Enable Kubernetes**  
 - ⚙️ `kubectl` configurado corretamente  
-  ```bash
-  kubectl get nodes
-  ```
 - 🚢 [ArgoCD](https://argo-cd.readthedocs.io/en/stable/getting_started/) instalado no cluster local  
 - 🧩 [Git](https://git-scm.com/downloads) instalado  
 - 🐍 [Python 3](https://www.python.org/downloads/) e [Docker](https://www.docker.com/products/docker-desktop/) instalados  
@@ -25,15 +22,21 @@ Crie **dois repositórios públicos** no GitHub:
 - `hello-app`
 - `hello-manifest`
 
+Exemplo de saída esperada:
+
+<img width="811" height="215" alt="image" src="https://github.com/user-attachments/assets/0f91020a-2e38-4a79-8b30-c045a756e462" />
+
 ---
 
 ## 📁 2. Estruturando o projeto localmente
 
-No terminal:
+No terminal (Powershell):
+
+Crie uma pasta chamada ‘testeaqui’, ou com qualquer outro nome, para melhor organização
 
 ```bash
-mkdir aquiprojeto
-cd aquiprojeto
+mkdir testeaqui
+cd testeaqui
 ```
 
 Clone os repositórios:
@@ -42,6 +45,16 @@ Clone os repositórios:
 git clone <url-repositorio-hello-app>
 git clone <url-repositorio-hello-manifest>
 ```
+
+Verifique com o comando :
+```bash
+ls
+```
+
+Saída esperada:
+
+<img width="608" height="200" alt="image" src="https://github.com/user-attachments/assets/4d639424-3149-4fbc-b0a7-c19d02e58e06" />
+
 
 Abra no VS Code:
 
@@ -56,6 +69,10 @@ aquiprojeto/
 ├── hello-app/
 └── hello-manifest/
 ```
+
+Saída esperada:
+
+<img width="222" height="142" alt="image" src="https://github.com/user-attachments/assets/7d44f1c7-7147-4360-9313-445b6e5af311" />
 
 ---
 
