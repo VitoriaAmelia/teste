@@ -135,6 +135,13 @@ Saída esperada no terminal:
 <img width="679" height="249" alt="image" src="https://github.com/user-attachments/assets/bebae959-a58d-4d04-9c91-b58c2d5156de" />
 
 
+Voltando ao terminal, na pasta hello-app, não se esqueça de adicionar o novo conteúdo ao repositório do GitHub com:
+
+```bash
+git add .
+git commit -m “sua mensagme de commit”
+git push
+```
 ---
 
 ## ⚙️ Estrutura do repositório `hello-manifest`
@@ -167,13 +174,6 @@ Saída esperada:
 - `deployment.yaml`: define como a aplicação será executada no Kubernetes  
 - `service.yaml`: expõe a aplicação  
 
-Voltando ao terminal, na pasta hello-app, não se esqueça de adicionar o novo conteúdo ao repositório do GitHub com:
-
-```bash
-git add .
-git commit -m “sua mensagme de commit”
-git push
-```
 
 ---
 
