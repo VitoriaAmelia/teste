@@ -176,15 +176,19 @@ Saída esperada:
 No terminal:
 
 ```bash
-ssh-keygen -t rsa -b 4096 -C "ci@hello-app" -f $env:USERPROFILE\.ssh\hello_app_ci
+ssh-keygen -t rsa -b 4096 -C "github-actions@fastapi" -f $env:USERPROFILE\.ssh\projeto_app
 ```
 
 Pressione **Enter** duas vezes.  
-Depois, exiba a chave pública:
+
+
+Depois, rode o comando para exibir a chave pública e guarde sua saída:
 
 ```bash
-cat ~/.ssh/hello_app_ci.pub
+cat ~/.ssh/projeto_app.pub
 ```
+
+<img width="1092" height="155" alt="image" src="https://github.com/user-attachments/assets/8eed958d-e4a6-4ad0-92fc-e33608b3eccd" />
 
 ---
 
@@ -193,11 +197,21 @@ cat ~/.ssh/hello_app_ci.pub
 No repositório **`hello-manifest`**:
 
 1. Vá em **Settings → Deploy keys → Add deploy key**
+
+<img width="778" height="128" alt="image" src="https://github.com/user-attachments/assets/9adbc10d-b451-4e9d-96ba-8978b3286d47" />
+
+<img width="1103" height="605" alt="image" src="https://github.com/user-attachments/assets/655ed132-0de3-4c93-819f-d2da1f82d202" />
+
+
 2. Preencha:
-   - **Title:** `ci-deploy-key`
-   - **Key:** cole o conteúdo do arquivo `.pub`
+   - **Title:** `app-key`
+   - **Key:** cole o conteúdo da saída do último comando
    - **Marque:** “Allow write access”
 3. Clique em **Add key**
+
+
+<img width="719" height="419" alt="image" src="https://github.com/user-attachments/assets/f2b31d29-6a5f-4424-991d-77be891d86a1" />
+
 
 ---
 
