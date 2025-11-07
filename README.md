@@ -378,6 +378,9 @@ tela de aceso aqui imagem
 No painel do ArgoCD:
 
 1. Clique em **New App**
+
+<img width="1024" height="133" alt="image" src="https://github.com/user-attachments/assets/60b11e64-40e5-4e99-b023-92715d395728" />
+
 2. Configure:
    - **Application name:** `hello-app`
    - **Project:** `default`
@@ -387,9 +390,12 @@ No painel do ArgoCD:
    - **Path:** `hello-app`
    - **Cluster URL:** `in-cluster`
    - **Namespace:** `default`
+
 3. A aplicação deve aparecer como **Healthy** ✅  
 
-Acesse no navegador:  
+<img width="548" height="402" alt="image" src="https://github.com/user-attachments/assets/6a127faa-0dbf-4bef-b757-5a45e69f6afe" />
+
+Acesse no navegador para ver:  
 👉 [http://localhost:30080/](http://localhost:30080/)
 
 ---
@@ -400,7 +406,16 @@ Acesse no navegador:
 2. Aceite o **Pull Request** no repositório `hello-manifest`
 3. Verifique no ArgoCD:
    - O app ficará **Out of Sync**
+
+<img width="424" height="367" alt="outofsyncteste" src="https://github.com/user-attachments/assets/0c368c6e-e310-4907-81e0-9e882ef78f9d" />
+
+
    - Depois sincronizará automaticamente
+
+
+<img width="424" height="367" alt="outofsyncteste" src="https://github.com/user-attachments/assets/bbc05f12-4c65-4ec3-9ea5-06035c2a466d" />
+
+
    - A nova mensagem aparecerá em `http://localhost:30080/`
 
 ---
