@@ -167,6 +167,14 @@ Saída esperada:
 - `deployment.yaml`: define como a aplicação será executada no Kubernetes  
 - `service.yaml`: expõe a aplicação  
 
+Voltando ao terminal, na pasta hello-app, não se esqueça de adicionar o novo conteúdo ao repositório do GitHub com:
+
+```bash
+git add .
+git commit -m “sua mensagme de commit”
+git push
+```
+
 ---
 
 ## ☁️ 3. Criando chaves SSH e adicionando segredos no GitHub
@@ -187,8 +195,9 @@ Depois, rode o comando para exibir a chave pública e guarde sua saída:
 ```bash
 cat ~/.ssh/projeto_app.pub
 ```
+Saída esperada:
 
-<img width="1088" height="151" alt="image" src="https://github.com/user-attachments/assets/78af8a01-8d87-48b0-97dd-686b90fe9fe2" />
+<img width="1095" height="134" alt="image" src="https://github.com/user-attachments/assets/2f45eb39-7014-441b-9867-1f5dbb208140" />
 
 ---
 
@@ -223,39 +232,75 @@ Exiba a chave privada:
 cat ~/.ssh/hello_app_ci
 ```
 
+Saída esperada:
+
+<img width="667" height="312" alt="image" src="https://github.com/user-attachments/assets/897287fb-227c-4fd9-94a4-caecb39d95dd" />
+
+
 No repositório **`hello-app`**:
 
 1. Vá em **Settings → Secrets and variables → Actions**
 2. Clique em **New repository secret**
+
+<img width="1061" height="618" alt="image" src="https://github.com/user-attachments/assets/0000aff5-9bd4-409c-a352-a9e8856835d1" />
+
+A tela seguinte é semelhante à tela de preenchimento da chave anterior. Nela, preencha:
+
 3. Nome: `SSH_PRIVATE_KEY`
-4. Valor: cole a chave privada
+4. Valor: cole a saída do último comando
 5. Clique em **Add secret**
 
 ---
 
 ### 🐳 Adicionar Secrets do Docker Hub
 
-1. Gere um **Personal Access Token** no [Docker Hub → Account Settings → Personal Access Tokens](https://hub.docker.com/settings/security)  
-   - Clique em “Generate New Token”  
+1. Gere um **Personal Access Token** no [Docker Hub → ícone de Perfil  → Account Settings → Personal Access Tokens](https://hub.docker.com/settings/security)
+
+<img width="1320" height="624" alt="image" src="https://github.com/user-attachments/assets/ae20b1dd-daf2-41fa-86b1-bf59fcb821d7" />
+
+   - Clique em “Generate New Token”
+
+<img width="1343" height="583" alt="image" src="https://github.com/user-attachments/assets/10570e23-2d26-4364-81d1-3fd247b0fa66" />
+
    - Descrição: `github-actions`
    - Permissão: `Read, Write, Delete`
-   - Copie o token gerado  
+   - Copie o token gerado
 
-2. No repositório **`hello-app`**, adicione:
-   - `DOCKER_USERNAME` → seu usuário Docker Hub  
-   - `DOCKER_PASSWORD` → o token gerado  
+<img width="639" height="397" alt="image" src="https://github.com/user-attachments/assets/8c7d2ccb-66b0-4847-8318-7c2f7495768a" />
+
+
+Obs: o usuário do Docker hub pode ser visto na tela incial dos repositórios, quando se clica no ícone do perfil:
+
+<img width="1261" height="392" alt="image" src="https://github.com/user-attachments/assets/1c91a8d7-6648-4105-a67b-3a8dac440b9e" />
+
+
+
+2. No repositório **`hello-app`**, no mesmo caminho do último secret, adicione:
+   - `DOCKER_USERNAME`, com valor sendo seu usuário Docker Hub  
+   - `DOCKER_PASSWORD`, com valor sendo seu token gerado
+  
+Saída esperada das secrets do repositório:
+
+<img width="722" height="244" alt="image" src="https://github.com/user-attachments/assets/94e90b2a-4d7d-4a94-9919-6475431ae055" />
 
 ---
 
 ## ⚙️ 4. Criando o GitHub Actions (CI/CD)
 
 No repositório **`hello-manifest`**, crie a seguinte estrutura:
+1. uma pasta '.github'
+2. Dentro dela, uma pasta 'workflows'
+3. Dentro dela, um arquivo chamando 'ci-cd.yaml'
 
 ```
 .github/
 └── workflows/
     └── ci-cd.yaml
 ```
+
+Saída esperada no VsCode:
+
+
 
 Arquivo **`ci-cd.yaml`**:
 ```yaml
