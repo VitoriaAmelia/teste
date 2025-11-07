@@ -188,7 +188,7 @@ Depois, rode o comando para exibir a chave pública e guarde sua saída:
 cat ~/.ssh/projeto_app.pub
 ```
 
-<img width="1092" height="155" alt="image" src="https://github.com/user-attachments/assets/8eed958d-e4a6-4ad0-92fc-e33608b3eccd" />
+<img width="1088" height="151" alt="image" src="https://github.com/user-attachments/assets/78af8a01-8d87-48b0-97dd-686b90fe9fe2" />
 
 ---
 
@@ -210,7 +210,7 @@ No repositório **`hello-manifest`**:
 3. Clique em **Add key**
 
 
-<img width="719" height="419" alt="image" src="https://github.com/user-attachments/assets/f2b31d29-6a5f-4424-991d-77be891d86a1" />
+<img width="722" height="417" alt="image" src="https://github.com/user-attachments/assets/e99e19d3-09c9-4a82-940b-ec2a3b8708b7" />
 
 
 ---
