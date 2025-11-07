@@ -393,7 +393,7 @@ No painel do ArgoCD:
 
 3. A aplicação deve aparecer como **Healthy** ✅  
 
-<img width="548" height="402" alt="image" src="https://github.com/user-attachments/assets/6a127faa-0dbf-4bef-b757-5a45e69f6afe" />
+<img width="425" height="431" alt="healthy" src="https://github.com/user-attachments/assets/e9308666-84fd-4346-8766-42455e4c37db" />
 
 Acesse no navegador para ver:  
 👉 [http://localhost:30080/](http://localhost:30080/)
