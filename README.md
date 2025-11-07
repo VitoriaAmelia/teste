@@ -22,6 +22,10 @@ Crie **dois repositórios públicos** no GitHub:
 - `hello-app`
 - `hello-manifest`
 
+Para isso, entre na sua conta do GitHub e procure por Repositories → New:
+
+<img width="1228" height="111" alt="image" src="https://github.com/user-attachments/assets/0c85a8a7-1352-4571-b4ba-7922599b7c1c" />
+
 Exemplo de saída esperada:
 
 <img width="811" height="215" alt="image" src="https://github.com/user-attachments/assets/0f91020a-2e38-4a79-8b30-c045a756e462" />
@@ -32,7 +36,7 @@ Exemplo de saída esperada:
 
 No terminal (Powershell):
 
-Crie uma pasta chamada ‘testeaqui’, ou com qualquer outro nome, para melhor organização
+Crie uma pasta chamada ‘testeaqui’, ou com qualquer outro nome, para melhor organização:
 
 ```bash
 mkdir testeaqui
@@ -65,7 +69,7 @@ code .
 No VS Code, a estrutura esperada será:
 
 ```
-aquiprojeto/
+testeaqui/
 ├── hello-app/
 └── hello-manifest/
 ```
@@ -76,9 +80,31 @@ Saída esperada:
 
 ---
 
+Observações:
+
+Durante o projeto, você é possível seguir instruções de criar e editar arquivos e pastas pelo VS Code ou pelo terminal.
+
+No Vs Code, você pode navegar conforme a imagem:
+
+  1 - Cria arquivo
+  2 - Cria pasta
+  
+<img width="282" height="64" alt="image" src="https://github.com/user-attachments/assets/124d1957-8882-4afc-8c8c-c5a9cf284999" />
+
+No terminal, esses comandos podem ser úteis:
+
+```bash
+cd <caminho>     # entra em uma pasta
+cd ..            # volta uma pasta
+pwd              # mostra onde você está
+mkdir NomeDaPasta   # cria uma nova pasta
+New-Item "nome_arquivo.txt"   # cria um novo arquivo
+code .           #abre o Vs Code no diretório
+```
+
 ## ⚙️ Estrutura do repositório `hello-app`
 
-Crie os seguintes arquivos:
+Crie os seguintes arquivos dentro da pasta hello-app (no Vs Code ou no terminal):
 
 ### 🐳 `Dockerfile`
 ```Dockerfile
@@ -95,10 +121,19 @@ Crie os seguintes arquivos:
 # código aqui
 ```
 
-**Explicação:**
+**Os três arquivos:**
 - `main.py`: código principal da aplicação FastAPI  
 - `Dockerfile`: instruções para criar a imagem Docker da aplicação  
-- `requirements.txt`: dependências Python necessárias para o app  
+- `requirements.txt`: dependências Python necessárias para o app funcionar
+
+Saída esperada no Vs Code:
+
+<img width="246" height="91" alt="image" src="https://github.com/user-attachments/assets/bb4c48f5-2ed5-4b47-ab2a-1a8ac66963e6" />
+
+Saída esperada no terminal:
+
+<img width="679" height="249" alt="image" src="https://github.com/user-attachments/assets/bebae959-a58d-4d04-9c91-b58c2d5156de" />
+
 
 ---
 
@@ -113,6 +148,11 @@ hello-manifest/
     └── deployment.yaml
 ```
 
+Saída esperada:
+
+<img width="288" height="74" alt="image" src="https://github.com/user-attachments/assets/5da02613-cdaf-4ceb-8d9f-4fcdc3d1234a" />
+
+
 ### `service.yaml`
 ```yaml
 # código aqui
@@ -125,7 +165,7 @@ hello-manifest/
 
 **Explicação:**
 - `deployment.yaml`: define como a aplicação será executada no Kubernetes  
-- `service.yaml`: expõe a aplicação dentro (ou fora) do cluster  
+- `service.yaml`: expõe a aplicação  
 
 ---
 
