@@ -271,7 +271,7 @@ A tela seguinte é semelhante à tela de preenchimento da chave anterior. Nela, 
 
 Obs: o usuário do Docker hub pode ser visto na tela incial dos repositórios, quando se clica no ícone do perfil:
 
-<img width="1261" height="392" alt="image" src="https://github.com/user-attachments/assets/1c91a8d7-6648-4105-a67b-3a8dac440b9e" />
+<img width="336" height="396" alt="image" src="https://github.com/user-attachments/assets/d40cc922-de5f-47f9-bcdd-6075a3b822c7" />
 
 
 
@@ -300,6 +300,7 @@ No repositório **`hello-manifest`**, crie a seguinte estrutura:
 
 Saída esperada no VsCode:
 
+<img width="286" height="133" alt="image" src="https://github.com/user-attachments/assets/8adcb680-d721-4afa-a61d-b511213c85a0" />
 
 
 Arquivo **`ci-cd.yaml`**:
@@ -307,10 +308,9 @@ Arquivo **`ci-cd.yaml`**:
 # código aqui
 ```
 
-Adicione ao repositório:
+No terminal, na pasta hello-manifest, não se esqueça de dar commit:
 
 ```bash
-cd aquiprojeto/hello-manifest
 git add .
 git commit -m "Adiciona pipeline CI/CD"
 git push
@@ -327,6 +327,7 @@ git push
    - ✅ Um **Pull Request** foi criado no repositório `hello-manifest`
    - ✅ O arquivo `deployment.yaml` foi atualizado com a nova tag da imagem  
 
+colocar imagens do teste aqui lembrar
 ---
 
 ## 🧭 7. Acessando o ArgoCD
@@ -343,10 +344,18 @@ Verifique se está ativo:
 kubectl get pods -n argocd
 ```
 
+<img width="826" height="171" alt="image" src="https://github.com/user-attachments/assets/36c5d58d-6366-4d3a-8f3c-7b49f67379ab" />
+
+Configure a porta de acesso:
+
+```bash
+kubectl port-forward svc/argocd-server -n argocd 8080:443
+```
+
 Abra no navegador:  
 👉 [https://localhost:8080](https://localhost:8080)
 
-Recupere a senha:
+Recupere a senha de acesso:
 ```bash
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}"
 ```
@@ -358,7 +367,9 @@ Decodifique a senha:
 
 Login:
 - **User:** `admin`  
-- **Senha:** obtida no comando acima  
+- **Senha:** obtida no comando acima
+
+tela de aceso aqui imagem
 
 ---
 
